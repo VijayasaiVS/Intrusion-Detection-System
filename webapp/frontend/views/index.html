@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intrusion Detection System</title>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='./styles/index.css')}}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script src="{{url_for('static',filename='./styles/index.js')}}"></script>
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='./styles/animate.css')}}"
+    />
+    <script src="{{url_for('static',filename='./styles/wow.min.js')}}"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script>
+      new WOW().init();
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+    </style>
+  </head>
+  <body>
+    <nav class="nav-wrapper">
+      <div class="logo">
+        <a href="#welcome"><i class="fas fa-bug logo-img"></i></a>
+      </div>
+      <ul class="nav-list">
+        <li class="active"><a href="#welcome">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+    <section class="welcome" id="welcome">
+      <div class="welcome-intro">
+        <div class="welcome-content">
+          <h1 class="wow animate__zoomInDown" data-wow-duration="1s">
+            Intrusion Detection System
+          </h1>
+          <h3 class="wow animate__zoomInDown" data-wow-delay="0.5s">
+            A place that helps users predict & verify type of attack/intrusion
+            based on the given input data/csv file
+          </h3>
+          <br /><br />
+          <form action="/intrusion" method="get">
+            <button
+              type="submit"
+              class="wow animate__slideInLeft submit_button"
+              data-wow-delay="1s"
+            >
+              Start Testing
+            </button>
+          </form>
+        </div>
+        <div class="welcome-image">
+          <img
+            src="{{url_for('static',filename='./img/welcome.svg')}}"
+            height="560px"
+            width="700px"
+          />
+        </div>
+      </div>
+    </section>
+    <section class="features" id="features">
+      <br /><br />
+      <h1>Features We Provide</h1>
+      <div class="feature-eclipse1">
+        <img src="{{url_for('static', filename='./img/Eclipse.svg')}}" />
+      </div>
+      <div class="feature-eclipse2">
+        <img src="{{url_for('static', filename='./img/Eclipse.svg')}}" />
+      </div>
+      <div class="feature-eclipse3">
+        <img src="{{url_for('static', filename='./img/Eclipse.svg')}}" />
+      </div>
+      <div class="feature-content wow animate__fadeInRightBig" data-wow-duration="2s" data-wow-offset="150" data-wow-delay="0.5s">
+        <div class="feature-box box1">
+          <img
+            class="feature-img"
+            src="{{url_for('static', filename='./img/feature1.svg')}}"
+            alt="Feature #1"
+          />
+          <h2 class="featuretitle">Identify Intrusion</h2>
+          <p class="feature-desc">
+            Analyses the data from the given input and predicts whether its is safe or vulnerable network. If it is 
+            vulnerable then it specifies the exact category and provide preventive measures</p>
+          <a href="#feature1">Learn More -></a>
+        </div>
+        <div class="feature-box box2">
+          <img
+            class="feature-img"
+            src="{{url_for('static', filename='./img/feature2.svg')}}"
+            alt="Feature #2"
+          />
+          <h2 class="featuretitle">Chart Based Output</h2>
+          <p class="feature-desc">
+            From the given data it analyses and produces Visual Representation using Chart Studio which is a sub-product of Plotly
+          </p>
+          <a href="#feature2">Learn More -></a>
+        </div>
+        <div class="feature-box box3">
+          <img
+            class="feature-img"
+            src="{{url_for('static', filename='./img/feature3.svg')}}"
+            alt="Feature #3"
+          />
+          <h2 class="featuretitle">Download Predicted Data</h2>
+          <p class="feature-desc">
+            It lets users download the predicted csv file, if user provides the data through csv. Users can also download the plots
+            which is provided by Plotly.
+          </p>
+          <a href="#feature3">Learn More -></a>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <footer class="about" id="about">
+        <div class="about-content">
+          <h2>About Us</h2>
+          <h3 class="sign">Created By, Vijaya Sai</h3>
+          <h3>Reach Me At</h3>
+          <div class="social wow animate__fadeInLeftBig" data-wow-duration="2s">
+            <ul class="acc-lists" >
+              <li>
+                <a href="mailto:vijayasaivs@gmail.com" target="_blank">
+                  <i class="fas fa-envelope"></i
+                >&nbsp;&nbsp;Email</a>
+              </li>
+              <li>
+                <a href="https://github.com/VijayasaiVS" target="_blank">
+                  <i class="fab fa-github"></i
+                >&nbsp;&nbsp;Github</a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/VijayasaiVS" target="_blank">
+                  <i class="fab fa-linkedin"></i
+                >&nbsp;&nbsp;LinkedIn</a>
+              </li>
+              <li>
+                <a href="https://t.me/VijayasaiVS" target="_blank">
+                  <i class="fab fa-telegram"></i
+                >&nbsp;&nbsp;Telegram</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>
