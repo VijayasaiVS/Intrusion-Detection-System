@@ -26,7 +26,7 @@ body {
   margin: 0;
   padding: 0 2rem;
   top: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Ubuntu',sans-serif;
   color: #33356b;
 }
 
@@ -170,7 +170,13 @@ section {
   letter-spacing: 0.1rem;
 }
 
-.welcome-content .submit_button {
+.welcome-image {
+  position: absolute;
+  top: 12%;
+  right: 5%;
+}
+
+button[type=submit] {
   height: 4rem;
   width: 13rem;
   border: none;
@@ -185,7 +191,7 @@ section {
   cursor: pointer;
 }
 
-.welcome-content .submit_button:hover {
+button[type=submit]:hover {
   height: 5rem;
   width: 15rem;
   border: 3px solid #33356b;
@@ -196,12 +202,6 @@ section {
   background-color: transparent;
   border-radius: 1.5rem;
   cursor: pointer;
-}
-
-.welcome-image {
-  position: absolute;
-  top: 12%;
-  right: 5%;
 }
 
 .features {
@@ -426,5 +426,94 @@ section {
   text-decoration: none;
   color: #33356b;
   font-size: 1.5rem;
+}
+
+h1.title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.form {
+  position: absolute;
+  top: 75%;
+}
+
+input[type="file"]::file-selector-button {
+  background: #33356b;
+  height: 2rem;
+  border: none;
+  color: #FBF9FF;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  border-radius: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+input[type="file"]:hover::file-selector-button {
+  background: transparent;
+  border: 2px solid #33356b;
+  color: #33356b;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  border-radius: 10px;
+}
+
+input[type="file"] {
+  font-weight: bolder;
+}
+
+.form button[type='submit'] {
+  height: 2rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.form button[type='submit']:hover {
+  height: 2rem;
+  width: 13rem;
+}
+
+.steps {
+  width: 50%;
+}
+
+.steps .upload_img {
+  position: absolute;
+  z-index: 1000;
+  top: 5%;
+  right: 5%;
+}
+
+button[type='button'] {
+  background: #33356b;
+  color: #FBF9FF;
+  font-weight: bold;
+  position: absolute;
+  text-transform: uppercase;
+  border: none;
+  top: 0%;
+  margin-top: 2.5rem;
+  border-radius: 0.75rem;
+  padding: 0.8rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+button[type='button']:hover {
+  background: #eaebff;
+  color: #33356b;
+  font-weight: bold;
+  position: absolute;
+  text-transform: uppercase;
+  border: 2px;
+  top: 0%;
+  border: 2px solid #33356b;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  border-radius: 0.75rem;
+  padding: 0.8rem;
 }
 /*# sourceMappingURL=index.css.map */

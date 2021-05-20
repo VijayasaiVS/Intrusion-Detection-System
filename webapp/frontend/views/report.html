@@ -37,40 +37,5 @@
     </style>
   </head>
   <body>
-    <div class="content">
-      <a href="/" class="home_button"><button type="button"><i class="fas fa-home"></i>&nbsp;Home</button></a>
-      <h1 class="title">Intrusion Detection System</h1>
-      <br />
-      <h2>Step:-</h2>
-      <div class="steps">
-        <h2>
-          <ol>
-            <li>Choose a CSV file with respective fields</li>
-            <br /><br />
-            <li>After selecting the file click on Upload</li>
-          </ol>
-        </h2>
-        <div class="upload_img">
-          <img src="{{url_for('static',filename='./img/upload.svg')}}" width=760px height=660px>
-        </div>
-      </div>
-    </div>
-    <div class="form">
-      <form action="upload" method="POST" enctype = "multipart/form-data">
-        <input
-          type="file"
-          accept=".csv"
-          value="Choose File"
-          id="upload_file"
-          class="upload_file"
-          name="upload_file"
-          required
-        />
-        <button type="submit">Upload</button>
-        {% for message in get_flashed_messages() %}
-        <p>{{ message }}</p>
-      {% endfor %}
-      </form>
-    </div>
+      <p>{{op}}</p>
   </body>
-</html>

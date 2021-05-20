@@ -42,7 +42,7 @@ body{
     margin: 0;
     padding: 0 2rem;
     top: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu',sans-serif;
     color: $primarycolor;
 }
 nav {
@@ -153,38 +153,38 @@ section{
     font-weight: 500;
     letter-spacing: 0.1rem;
   }
-  .submit_button{
-    height: 4rem;
-    width: 13rem;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: $alternatebg;
-    text-transform: uppercase;
-    background-color: $primarycolor;
-    border-radius: 1.5rem;
-    transition: 0.8s;
-    cursor: pointer;
-  }
-  .submit_button:hover{
-    height: 5rem;
-    width: 15rem;
-    border: 3px solid $primarycolor;
-    font-size: 1.2rem;
-    font-weight: bolder;
-    color: $primarycolor;
-    text-transform: uppercase;
-    background-color: transparent;
-    border-radius: 1.5rem;
-    cursor: pointer;
-  }
+  
 }
 .welcome-image{
     position: absolute;
     top:12%;
     right: 5%;
 }
-
+button[type=submit]{
+  height: 4rem;
+  width: 13rem;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: $alternatebg;
+  text-transform: uppercase;
+  background-color: $primarycolor;
+  border-radius: 1.5rem;
+  transition: 0.8s;
+  cursor: pointer;
+}
+button[type=submit]:hover{
+  height: 5rem;
+  width: 15rem;
+  border: 3px solid $primarycolor;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: $primarycolor;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  cursor: pointer;
+}
 .features {
   // width: 100%;
   padding: 0 2rem;
@@ -241,7 +241,7 @@ section{
   transition: 0.5s ease-in-out;
   p {
     font-weight: 400;
-    color: $commoncolor;
+    color: $commoncolor; 
   }
   a {
     opacity: 0;
@@ -339,4 +339,84 @@ section{
   text-decoration: none;
   color: $primarycolor;
   font-size: $descriptiontxt;
+}
+
+h1.title{
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+}
+.form{
+  position: absolute;
+  top: 75%;
+}
+input[type="file"]::file-selector-button
+{
+  background: $primarycolor;
+  height: 2rem;
+  border: none;
+  color: $alternatebg;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+input[type="file"]:hover::file-selector-button
+{
+  background: transparent;
+  border: 2px solid $primarycolor;
+  color: $primarycolor;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  border-radius: 10px;
+}
+input[type="file"]{
+  font-weight: bolder;
+}
+.form{
+  button[type='submit']{
+    height: 2rem;
+    transition: 0.5s;
+  }
+  button[type='submit']:hover{
+    height: 2rem;
+    width: 13rem;
+  }
+}
+.steps{
+  width: 50%;
+  .upload_img{
+    position: absolute;
+    z-index: 1000;
+    top: 5%;
+    right: 5%;
+  }
+  }
+button[type='button']{
+  background: $primarycolor;
+  color: $alternatebg;
+  font-weight: bold;
+  position: absolute;
+  text-transform: uppercase;
+  border: none;
+  top: 0%;
+  margin-top: 2.5rem;
+  border-radius: 0.75rem;
+  padding: 0.8rem;
+  transition: 0.5s;
+}
+button[type='button']:hover{
+  background: $background;
+  color: $primarycolor;
+  font-weight: bold;
+  position: absolute;
+  text-transform: uppercase;
+  border: 2px ;
+  top: 0%;
+  border: 2px solid $primarycolor;
+  cursor: pointer;
+  margin-top: 2.5rem;
+  border-radius: 0.75rem;
+  padding: 0.8rem;
 }

@@ -2,3 +2,6 @@
 *.pkl
 *.txt
 *.env
+prediction/model
+webapp/server/data
+webapp/server/file_server

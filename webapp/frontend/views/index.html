@@ -14,6 +14,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link
+      rel="icon"
+      href="{{url_for('static',filename='./img/logo.svg')}}"
+      type="image/icon"
+      >
     <script src="{{url_for('static',filename='./styles/index.js')}}"></script>
     <link
       rel="stylesheet"
@@ -48,10 +53,10 @@
           <h1 class="wow animate__zoomInDown" data-wow-duration="1s">
             Intrusion Detection System
           </h1>
-          <h3 class="wow animate__zoomInDown" data-wow-delay="0.5s">
+          <h2 class="wow animate__zoomInDown" data-wow-delay="0.5s">
             A place that helps users predict & verify type of attack/intrusion
             based on the given input data/csv file
-          </h3>
+          </h2>
           <br /><br />
           <form action="/intrusion" method="get">
             <button
@@ -74,7 +79,7 @@
     </section>
     <section class="features" id="features">
       <br /><br />
-      <h1>Features We Provide</h1>
+      <h1>Features</h1>
       <div class="feature-eclipse1">
         <img src="{{url_for('static', filename='./img/Eclipse.svg')}}" />
       </div>
@@ -84,8 +89,8 @@
       <div class="feature-eclipse3">
         <img src="{{url_for('static', filename='./img/Eclipse.svg')}}" />
       </div>
-      <div class="feature-content wow animate__fadeInRightBig" data-wow-duration="2s" data-wow-offset="150" data-wow-delay="0.5s">
-        <div class="feature-box box1">
+      <div class="feature-content wow" data-wow-delay="0.5s">
+        <div class="feature-box box1 wow animate__fadeInDownBig" data-wow-duration="1s">
           <img
             class="feature-img"
             src="{{url_for('static', filename='./img/feature1.svg')}}"
@@ -97,7 +102,7 @@
             vulnerable then it specifies the exact category and provide preventive measures</p>
           <a href="#feature1">Learn More -></a>
         </div>
-        <div class="feature-box box2">
+        <div class="feature-box box2 wow animate__fadeInDownBig" data-wow-duration="1s" data-wow-delay="0.5s">
           <img
             class="feature-img"
             src="{{url_for('static', filename='./img/feature2.svg')}}"
@@ -109,7 +114,7 @@
           </p>
           <a href="#feature2">Learn More -></a>
         </div>
-        <div class="feature-box box3">
+        <div class="feature-box box3 wow animate__fadeInDownBig" data-wow-duration="1s" data-wow-delay="1s">
           <img
             class="feature-img"
             src="{{url_for('static', filename='./img/feature3.svg')}}"
@@ -130,7 +135,7 @@
           <h2>About Us</h2>
           <h3 class="sign">Created By, Vijaya Sai</h3>
           <h3>Reach Me At</h3>
-          <div class="social wow animate__fadeInLeftBig" data-wow-duration="2s">
+          <div class="social wow animate__fadeInLeftBig" data-wow-duration="1s">
             <ul class="acc-lists" >
               <li>
                 <a href="mailto:vijayasaivs@gmail.com" target="_blank">

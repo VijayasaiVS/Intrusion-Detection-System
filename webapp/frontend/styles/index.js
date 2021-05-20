@@ -9,7 +9,7 @@ $(window).on("scroll", function () {
   });
 
   //Switch Active Classes Js
-$(document).on("click", "ul li a", function () {
+$(document).on("click", "nav ul li a", function () {
     $("ul li a").removeClass("active");
     $(this).addClass("active");
   });
