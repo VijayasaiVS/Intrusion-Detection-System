@@ -44,13 +44,18 @@
     >
     <h1 class="title">Report</h1>
     <div class="basic_details">
-      <h3>Filename: {{filename}}</h3>
-      <h3>No. of Data: {{data_length}}</h3>
-      <h3>Accuracy: {{accuracy}}</h3>
-    </div><br>
-    <form action="/download/csv">
+      <h2>Filename: {{filename}}</h2>
+      <h2>No. of Data: {{data_length}}</h2>
+      <h2>Accuracy: {{accuracy}}</h2>
+    </div>
+    <form action="/download/csv" class="basic_details download">
       <button type="submit">Download Predicted File</button>
     </form>
-    {{plot1 | safe}}
+    <div class="basic_details">
+    <h2> Anomaly Score: {{anomaly_score}}</h2>
+    </div><br><br>
+    {{plot0 | safe}}<br>
+    {{plot1 | safe}}<br>
+    {{plot2 | safe}}
   </body>
 </html>

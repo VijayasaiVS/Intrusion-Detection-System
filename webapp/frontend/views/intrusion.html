@@ -41,10 +41,12 @@
       <a href="/" class="home_button"><button type="button"><i class="fas fa-home"></i>&nbsp;Home</button></a>
       <h1 class="title">Intrusion Detection System</h1>
       <br />
-      <h2>Step:-</h2>
+      <h2>Steps:-</h2>
       <div class="steps">
         <h2>
           <ol>
+            <li>Read our Github Wiki before uploading the CSV. <a 
+              href='https://github.com/VijayasaiVS/Intrusion-Detection-System/wiki' target="_blank">Click Here</a></li><br><br>
             <li>Choose a CSV file with respective fields</li>
             <br /><br />
             <li>After selecting the file click on Upload</li>
@@ -66,11 +68,20 @@
           name="upload_file"
           required
         />
-        <button type="submit">Upload</button>
+        <button type="submit" onclick="myFunction()">Upload</button>
         {% for message in get_flashed_messages() %}
         <p>{{ message }}</p>
       {% endfor %}
       </form>
+      <div id="loader">
+        <i class="fas fa-spinner loader-img"></i>
+      </div>
     </div>
+    <script>
+      var myVar;
+      function myFunction() {
+        document.getElementById("loader").style.display = "block";
+      }
+      </script>
   </body>
 </html>

@@ -1,12 +1,8 @@
 import os
 import shutil
 from flask import *
-from flask.templating import render_template
+from numpy.core.fromnumeric import mean
 import pandas as pd
-import chart_studio.tools as tls
-import chart_studio
-import chart_studio.plotly as py
-import plotly.express as px
 from werkzeug.utils import secure_filename
 import module as md
 from dotenv import load_dotenv, main
@@ -47,11 +43,20 @@ def upload():
     
     prediction_df=md.predict(dest_file)
     md.save_csv(prediction_df,(os.path.join(data_folder,'predicted_data.csv')))
-    label_info,data_length,total_accuracy,each_label_accuracy=md.predict_info(prediction_df)
+    label_info,data_length,total_accuracy=md.predict_info(prediction_df)
+    anomaly_score,anomaly_info=md.anomaly_count(label_info)
+    mean_score=md.label_items(prediction_df)
+    plot0=md.plot_bar(mean_score,mean_score['Type'],mean_score['Accuracy Score'],'Predicted Accuracy of Each Category')
+    plot1=md.plot_pie(anomaly_info,anomaly_info['Type'],anomaly_info['No. of Data'],'Intrusion Detection')
+    plot2=md.plot_pie(label_info,label_info['Label'],label_info['No. of Data'],'Detailed Categorization of Attack')
     render_content={
                     'filename': filename,
                     'data_length':data_length,
                     'accuracy':total_accuracy,
+                    'anomaly_score':anomaly_score,
+                    'plot0':plot0,
+                    'plot1':plot1,
+                    'plot2':plot2
                     }
     return render_template('report.html',**render_content)
 

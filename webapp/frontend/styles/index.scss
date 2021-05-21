@@ -385,7 +385,27 @@ input[type="file"]{
   }
 }
 .steps{
-  width: 50%;
+  width: 35%;
+  a{
+    text-decoration: underline;
+    color: $alternateclr;
+    font-weight: 400;
+  }
+  a:hover{
+    color: $primarycolor;
+    font-weight: 500;
+    animation: clrchange 1s linear;
+  }
+  @keyframes clrchange{
+    0%{
+      color: $alternateclr;
+      font-weight: 400;
+    }
+    100%{
+      color: $primarycolor;
+      font-weight: 500;
+    }
+  }
   .upload_img{
     position: absolute;
     z-index: 1000;
@@ -421,9 +441,30 @@ button[type='button']:hover{
   padding: 0.8rem;
 }
 .basic_details{
-  h3{
+  display: inline;
+  h2{
     display: inline-block;
-    margin-right: 2rem;
+    margin-right: 4rem;
     text-align: center;
   }
+}
+.download{
+  margin-right: 4rem;
+}
+#loader{
+  transform: scale(2);
+  display: none;
+  position: absolute;
+  right:-10%;
+  top:15%;
+  animation: spinaround 2s cubic-bezier(0.18,-0.02, 0.1, 0.86) infinite;
+}
+@keyframes spinaround {
+  0%{
+    transform: rotate(0deg) scale(2);
+  }
+  100%{
+    transform: rotate(360deg) scale(2);
+  }
+  
 }
