@@ -516,4 +516,10 @@ button[type='button']:hover {
   border-radius: 0.75rem;
   padding: 0.8rem;
 }
+
+.basic_details h3 {
+  display: inline-block;
+  margin-right: 2rem;
+  text-align: center;
+}
 /*# sourceMappingURL=index.css.map */
