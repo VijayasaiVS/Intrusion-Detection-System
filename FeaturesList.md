@@ -3,7 +3,7 @@
 |**Sl. No.**               |Feature Name                          |Description                         |
 |----------------|-------------------------------|-----------------------------|
 |01|duration           |    Total duration of the network connection        |
-|02       |protocol_type            |Types of Protocol used for making the connection (such as TCP ,UDP....)             |`
+|02       |protocol_type            |Types of Protocol used for making the connection (such as TCP ,UDP....)             |
 |03          |service| Network service on the destination, e.g., http, telnet, etc.|
 |04          |flag|Normal or error status of the connection|
 |05          |src_bytes|Number of data bytes sent from source to destination|

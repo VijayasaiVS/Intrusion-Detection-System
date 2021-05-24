@@ -6,3 +6,5 @@ prediction/model
 webapp/server/data
 webapp/server/file_server
 webapp/server/__pycache__
+prediction/prediction.ipynb
+prediction/data/updated_data.csv
