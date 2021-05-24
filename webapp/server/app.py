@@ -11,7 +11,11 @@ load_dotenv()
 app=Flask(__name__,static_folder='../frontend',template_folder='../frontend/views')
 app.secret_key=os.getenv('SECRET_KEY')
 upload_folder = os.getenv('UPLOAD_FOLDER')
+if not os.path.exists(upload_folder):
+    os.mkdir(upload_folder)
 data_folder=os.getenv('DATA_FOLDER')
+if not os.path.exists(data_folder):
+    os.mkdir(data_folder)
 @app.route("/")
 def index():
     session.clear
